@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CheckOut</title>
+    <link rel="icon" href="../image/pack.png">
+    <link rel="stylesheet" href="./style-checkout.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <header>
+            <h1>Pagamento</h1>
+            <img src="../image/pack.png" alt="">
+        </header>
+
+        <main class="form">
+            <h5>Número do cartão</h2>
+                <input id="numero-cart" type="text" placeholder="Digite somente números">
+
+            <h5>Nome impresso no Cartão</h2>
+                <input id="nome-cart" type="text" placeholder="Nome como está no cartão ">
+                
+            <h5>Validade</h5>
+            <section class="validade">
+                <select class="meses" placeholder="1x">
+                    <option value="1">Jan</option>
+                    <option value="2">Fev</option>
+                    <option value="3">Mar</option>
+                    <option value="1">Abr</option>
+                    <option value="2">Mai</option>
+                    <option value="3">Jun</option>
+                    <option value="1">Jul</option>
+                    <option value="2">Ago</option>
+                    <option value="3">Set</option>
+                    <option value="1">Out</option>
+                    <option value="2">Nov</option>
+                    <option value="3">Dez</option>
+                </select>
+                <input id="ano-cart" type="number" placeholder="Ano">
+                <input id="cvv" type="text" placeholder="CVV">
+            </section>
+
+            <h5>Parcelamento</h5>
+            <select class="parcelas" placeholder="1x">
+                <option value="1">1x</option>
+                <option value="2">2x</option>
+                <option value="3">3x</option>
+            </select>
+            
+            <section class="total">  
+                <h4 id="valor-total">Total: R$ 0,00</h4>
+                <a id='link-comprar' href="#"><button class="btn-comprar">COMPRAR</button></a>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="./finalizar-compra.js"></script>
+</body>
+
+</html>

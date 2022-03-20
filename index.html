@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy</title>
+    <link rel="icon" href="./image/pack.png">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="form-container">
+
+        <header class="form-header">
+            <p>Formulário para compra de <strong>Pacote de adesivos</strong></p>
+            <img src="./image/pack.png" alt="">
+        </header>
+
+        <main class="form">
+            <span class="span">Adicione pelo menos 1 adesivo</span>
+            <section class="adesivos">
+
+                <h5>Quais adesivos:</h5>
+
+                <div class="techs-container">
+                    <input id="react" type="checkbox" name="react" onchange="marcado()" value="23.00">
+                    <label for="react" class="techs">React - R$ 23,00</label>
+                </div>
+
+                <div class="techs-container">
+                    <input id="vue" type="checkbox" name="vue" onchange="marcado()" value="18.00">
+                    <label for="vue" class="techs">Vue - R$ 18,00</label>
+                </div>
+
+                <div class="techs-container">
+                    <input id="angular" type="checkbox" name="angular" onchange="marcado()" value="18.00">
+                    <label for="angular" class="techs">Angular - R$ 18,00</label>
+                </div>
+
+            </section>
+
+            <section class="qtd-adesivos">
+
+                <h5>Quantos adesivos de cada?</h5>
+
+                <div class="alterar-qtd">
+                    <i class="diminuir fa-solid fa-square-minus"></i>
+                    <input id="quantidade" type="number" value = "1">
+                    <i class="adicionar fa-solid fa-square-plus"></i>
+                </div>
+
+            </section>
+
+            <section class="obs">
+                <h5>Observações:</h5>
+                <textarea name="obs" id="obs" cols="46" rows="3" placeholder="Alguma dúvida ou recado?" maxlength="80"></textarea>
+            </section>
+
+        </main>
+
+        <footer>
+            <a id='button-link' href="#"><button class="enviar">ENVIAR</button></a>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/0538aa3b3c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
