@@ -63,6 +63,13 @@ input{
 }
 
 /* DADOS DO CARTÃO */
+
+#numero-cart::-webkit-outer-spin-button, 
+#numero-cart::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+
 .validade{
     display: flex;
     position: relative;
@@ -72,6 +79,11 @@ input{
 .validade input{
     width: 25%;
     display: inline;
+}
+
+.validade input::-webkit-outer-spin-button, 
+.validade input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 
 .meses{

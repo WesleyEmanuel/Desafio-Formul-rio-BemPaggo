@@ -1,9 +1,9 @@
-//Pagamento
+// Pagamento
 const btnComprar = document.querySelector('.btn-comprar');
 const linkComprar = document.querySelector('#link-comprar');
 const valorTotal = document.querySelector('#valor-total')
 
-//Formulário
+// Formulário
 const numeroCart = document.querySelector('#numero-cart');
 const nomeCart = document.querySelector('#nome-cart');
 const anoCart = document.querySelector('#ano-cart');
@@ -17,25 +17,53 @@ if(total > 0){
 
 localStorage.removeItem('valorTotal');
 
+// Ao clicar no botão comprar
 btnComprar.addEventListener('click', () =>{
-    validarInputs(numeroCart);
-    validarInputs(nomeCart);
-    validarInputs(anoCart);
-    validarInputs(cvvCart);
+    validarNumeroCart();
+    validarNomeCart();
+    validarAnoCart();
+    validarCvv();
     if(!numeroCart.classList.contains('error') && !nomeCart.classList.contains('error') && !anoCart.classList.contains('error') && !cvvCart.classList.contains('error')){
         resetInputs();
         linkComprar.href = './compra-finalizada.html'
     }
 });
 
-function validarInputs(input){
-    if(input.value.length < 1){
-        input.classList.add('error')
+// Funções de validação dos inputs
+function validarNumeroCart(){
+    if(numeroCart.value.length < 14){
+        numeroCart.classList.add('error')
     } else{
-        input.classList.remove('error')
+        numeroCart.classList.remove('error')
     }
 };
 
+function validarNomeCart(){
+    if(nomeCart.value == ""){
+        nomeCart.classList.add('error')
+    } else{
+        nomeCart.classList.remove('error')
+    }
+};
+
+function validarAnoCart(){
+    if(anoCart.value < 2022){
+        anoCart.classList.add('error')
+    } else{
+        anoCart.classList.remove('error')
+    }
+};
+
+function validarCvv(){
+    if(cvvCart.value.length < 3){
+        cvvCart.classList.add('error')
+    } else{
+        cvvCart.classList.remove('error')
+    }
+};
+
+
+// Resetando os inputs
 function resetInputs(){
     numeroCart.value = "";
     nomeCart.value = "";
